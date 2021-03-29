@@ -1,0 +1,30 @@
+
+.container {
+	margin-top: 30px;
+	text-align: center;
+}
+.add {
+	margin: auto;
+	width: 60%;
+	margin-top: 50px;
+}
+.display {
+	margin-top: 40px;
+}
+.add h1 {
+	text-align: center;
+}
+.add button {
+	margin-top: 30px;
+	width: 100%;
+	text-align: center;
+	font-size: large;
+}
+.record {
+	height: 100%;
+	width: 100%;
+	/* background-color: red; */
+}
+.div-record {
+	height: 100px;
+}

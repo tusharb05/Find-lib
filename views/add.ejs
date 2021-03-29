@@ -1,0 +1,21 @@
+<%- include('./partials/header') -%>
+<div class="add" style="color: white">
+<h1>Add a New Record</h1>
+<form action="/add" method="post" accept-charset="utf-8">
+	
+	<label for="title">Title</label>
+	<input type="text" name="title" class="form-control">
+	<label for="author">Author</label>
+	<input type="text" name="author" class="form-control">
+	<label for="recipient">Recipient</label>
+	<input type="text" name="recipient" class="form-control">
+	<label for="class_section">Recipient's Class and Section</label>
+	<input type="text" name="class" class="form-control">
+	<label for="date-issued">Date Issued</label>
+	<input type="text" name="dateIssued" class="form-control">
+	<button type="submit" class="btn btn-primary btn-submit" name="add">Add</button>
+
+</form>
+</div>
+
+<%- include('./partials/footer') -%>

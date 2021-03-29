@@ -1,0 +1,27 @@
+<%- include('./partials/header') -%>
+
+<div class="container">
+	<h1 style="color: whitesmoke">Current Students</h1>
+	<form action="/add">
+		<button type="submit" class="btn btn-primary btn-block">Add a New Record</button>
+	</form>
+	<div class="display" >
+	<% listOfRecords.forEach((singleRecord)=>{ %>
+		<div class="card card-body div-record" style="background-color: #ffc93c">
+			<a href="/records/<%=singleRecord._id%>" class="record">
+			<form method="post">
+				<p style="margin: 0">
+					<h4 style="color:black; text-decoration: none;">Name: <%=singleRecord.nameOfRecipient%>   Class: <%=singleRecord.class_section%></h4>
+					<!-- <input type="submit" value="Edit" name="change" class="btn btn-sm btn-success"> -->
+					<!-- <input type="submit" value="Delete" name="change" class="btn btn-sm btn-danger"> -->
+					<button formaction="/edit" class="btn btn-update btn-primary btn-sm" name="editBtn" value="<%=JSON.stringify(singleRecord)%>">Edit</button>
+					<button formaction="/delete" class="btn btn-update btn-primary btn-sm" name="delBtn" value="<%=singleRecord._id%>">Delete</button>
+				</p>
+			</form>
+			</a>
+		</div>	
+	<% }); %> 
+	</div>
+</div>
+
+<%- include('./partials/footer') -%>

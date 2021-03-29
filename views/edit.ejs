@@ -1,0 +1,21 @@
+<%- include('./partials/header') -%>
+
+<div class="add" style="color: white">
+<form action="/save-edit" method="post">
+    <h1>Edit The Record</h1>
+
+    <label for="title">Title</label>
+    <input type="text" class="form-control" name="newTitle" value="<%=previousTitle%>">
+    <label for="author">Author</label>
+    <input type="text" class="form-control" name="newAuthor" value="<%=previousAuthor%>">
+    <label for="recipient">Recipient</label>
+    <input type="text" class="form-control" name="newName" value="<%=previousName%>">
+    <label for="class_section">Class and Section</label>
+    <input type="text" class="form-control" name="newClass" value="<%=previousClass%>">
+    <label for="date-issued">Date Issued</label>
+    <input type="text" class="form-control" name="newDate" value="<%=previousDate%>">
+    <button type="submit" class="btn btn-primary">Save Edits</button>
+</form>
+</div>
+
+<%- include('./partials/footer') -%>
