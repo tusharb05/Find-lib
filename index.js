@@ -27,16 +27,6 @@ const recordSchema = mongoose.Schema({
 
 const Record = mongoose.model('Record', recordSchema);
 
-// const newRecord = new Record({
-// 	title: "Harry Potter",
-// 	author: "JK",
-// 	nameOfRecipient: "Mike",
-// 	class_section: "III",
-// 	dateIssued: "12-12-2000"
-// });
-
-// newRecord.save()
-
 app.get('/', (req, res)=>{
 	Record.find((err, result)=>{
 		if(!err) {
